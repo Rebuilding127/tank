@@ -1,0 +1,11 @@
+.icon {
+    width: 2em; height: 2em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+ .container {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+ }
