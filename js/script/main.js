@@ -1,16 +1,14 @@
 require.config({
-    baseUrl: 'js/',
     paths: {
-        'jquery': 'lib/jquery-3.2.1.slim'
+        'jquery': '../lib/jquery-3.2.1.slim',
+        'tank': 'tank'
     }
 });
-require(['jquery'], function($) {
+require(['tank'], function(Tank) {
     console.log('Hello World !');
-    $('#contentBtn').on('click', function() {
-        $('#messagebox').html('You have access Jquery by using require()');
 
-        require(['script/desc'],function(desc){
-            console.log(JSON.stringify(desc));
-        });
-    });
+    var t1 = new Tank();
+    console.log(t1);
+    t1.fire({speed: 10});
+
 });
